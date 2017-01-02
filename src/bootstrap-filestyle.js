@@ -183,7 +183,7 @@
 
 		htmlInput : function() {
 			if (this.options.input) {
-				return '<input type="text" class="form-control ' + (this.options.size == 'nr' ? '' : 'input-' + this.options.size) + '" placeholder="'+ this.options.placeholder +'" disabled> ';
+				return '<input type="text" class="form-control ' + (this.options.size == 'nr' ? '' : 'input-' + this.options.size) + '" placeholder="'+ this.options.placeholder +'" disabled name="' + (this.options.inputName) + '"> ';
 			} else {
 				return '';
 			}
@@ -342,7 +342,8 @@
 				'buttonName' : $this.attr('data-buttonName'),
 				'iconName' : $this.attr('data-iconName'),
 				'badge' : $this.attr('data-badge') !== 'false',
-				'placeholder': $this.attr('data-placeholder')
+				'placeholder': $this.attr('data-placeholder'),
+				'inputName': $this.attr('data-inputName')
 			};
 
 			$this.filestyle(options);
